@@ -1,20 +1,16 @@
-using System.Collections;
-using System.Collections.Generic;
-using TMPro;
 using UnityEngine;
-using UnityEngine.Serialization;
 
 public class WeaponRotate : MonoBehaviour
 {
     [SerializeField] private Sprite [] mSprite;
     [SerializeField] private SpriteRenderer mSpriteRenderer;
-    // Start is called before the first frame update
-    void Start()
+
+    void Update()
     {
+        RotateWeapon();
     }
 
-    // Update is called once per frame
-    void Update()
+    private void RotateWeapon()
     {
         if (Camera.main != null)
         {
